@@ -11,7 +11,7 @@
             <div>
                 <div class="d-flex align-items-center">
                     <div class="pe-3">
-                        <img class="rounded-circle w-100" style="max-width: 40px;" src="/storage/{{ $post -> user -> profile -> image }}">
+                        <img class="rounded-circle w-100" style="max-width: 40px;" src="{{ $post -> user -> profile -> profileImage() }}">
                     </div>
 
                     <div>

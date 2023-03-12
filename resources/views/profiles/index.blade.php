@@ -13,7 +13,7 @@
                 <div class="d-flex align-items-center pb-3">
                     <div class="h4">{{ $user -> username }}</div>
 
-                    <follow-button user-id="{{ $user -> id }}"></follow-button>
+                    <follow-button user-id="{{ $user -> id }}" follows="{{ $follows }}"></follow-button>
 
                 </div>
 
@@ -29,8 +29,8 @@
 
             <div class="d-flex">
                 <div class="pe-5"><strong>{{ $user -> posts -> count() }}</strong> posts</div>
-                <div class="pe-5"><strong>123k</strong> followers</div>
-                <div class="pe-5"><strong>123</strong> following</div>
+                <div class="pe-5"><strong>{{ $user -> profile -> followers -> count() }}</strong> followers</div>
+                <div class="pe-5"><strong>{{ $user -> following -> count() }}</strong> following</div>
             </div>
 
             <div class="pt-4"><strong>{{ $user -> profile -> title }}</strong></div>
